@@ -5,7 +5,7 @@ const path = require("path")
 module.exports = exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve(`src/templates/postTemplate.js`)
+  const postTemplate = path.resolve(`src/templates/postTemplate.tsx`)
 
   return graphql(`
     {
