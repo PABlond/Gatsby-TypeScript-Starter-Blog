@@ -4,9 +4,14 @@ import { Link } from "gatsby"
 
 const IndexPage = ({ data }) => {
   console.log(data.allMarkdownRemark.edges[0].node.htmlAst)
-  const html = data.allMarkdownRemark.edges.map(mod => mod.node.html).join("")
   const content = data.allMarkdownRemark.edges.map(mod => {
-    return { title: mod.node.frontmatter.title, id: mod.node.id, date: mod.node.frontmatter.date, excerpt: mod.node.excerpt }
+    return {
+      title: mod.node.frontmatter.title,
+      id: mod.node.id,
+      date: mod.node.frontmatter.date,
+      excerpt: mod.node.excerpt,
+      slug: mod.node.fields.slug
+    }
   })
   return (
     <>
@@ -16,8 +21,8 @@ const IndexPage = ({ data }) => {
           <>
             <h1>{post.title}</h1>
             <p>{post.date}</p>
-            <Link to={`post/${post.id}`}>
-                <p>{post.excerpt}</p>
+            <Link to={post.slug}>
+              <p>{post.excerpt}</p>
             </Link>
           </>
         )
@@ -32,7 +37,9 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 100)
-          id
+          fields {
+            slug
+          }
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
