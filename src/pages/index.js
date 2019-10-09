@@ -1,11 +1,12 @@
 import React from "react"
 import { graphql } from "gatsby"
+import { Link } from "gatsby"
 
 const IndexPage = ({ data }) => {
   console.log(data.allMarkdownRemark.edges[0].node.htmlAst)
   const html = data.allMarkdownRemark.edges.map(mod => mod.node.html).join("")
   const content = data.allMarkdownRemark.edges.map(mod => {
-    return { title: mod.node.frontmatter.title, date: mod.node.frontmatter.date, excerpt: mod.node.excerpt }
+    return { title: mod.node.frontmatter.title, id: mod.node.id, date: mod.node.frontmatter.date, excerpt: mod.node.excerpt }
   })
   return (
     <>
@@ -15,9 +16,9 @@ const IndexPage = ({ data }) => {
           <>
             <h1>{post.title}</h1>
             <p>{post.date}</p>
-            <div>
+            <Link to={`post/${post.id}`}>
                 <p>{post.excerpt}</p>
-            </div>
+            </Link>
           </>
         )
       })}
@@ -30,8 +31,8 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       edges {
         node {
-          html
           excerpt(pruneLength: 100)
+          id
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
