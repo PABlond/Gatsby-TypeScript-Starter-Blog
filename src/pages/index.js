@@ -1,21 +1,45 @@
 import React from "react"
-import { Link } from "gatsby"
+import { graphql } from "gatsby"
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+const IndexPage = ({ data }) => {
+  console.log(data.allMarkdownRemark.edges[0].node.htmlAst)
+  const html = data.allMarkdownRemark.edges.map(mod => mod.node.html).join("")
+  const content = data.allMarkdownRemark.edges.map(mod => {
+    return { title: mod.node.frontmatter.title, date: mod.node.frontmatter.date, excerpt: mod.node.excerpt }
+  })
+  return (
+    <>
+      <h1>Homepage</h1>
+      {content.map(post => {
+        return (
+          <>
+            <h1>{post.title}</h1>
+            <p>{post.date}</p>
+            <div>
+                <p>{post.excerpt}</p>
+            </div>
+          </>
+        )
+      })}
+    </>
+  )
+}
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export const pageQuery = graphql`
+  query HomePageQuery {
+    allMarkdownRemark {
+      edges {
+        node {
+          html
+          excerpt(pruneLength: 100)
+          frontmatter {
+            title
+            date(formatString: "MMMM DD, YYYY")
+          }
+        }
+      }
+    }
+  }
+`
 
 export default IndexPage
