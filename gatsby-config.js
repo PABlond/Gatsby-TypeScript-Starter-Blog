@@ -5,7 +5,11 @@ module.exports = {
     title: `Not everyone can be Gandhi`,
     description: `Not everyone can be Gandhi, but each of us has the power to make sure our own lives count – and it’s those millions of lives that will ultimately build a better world. – Jeffrey Skoll`,
     author: `Pierre-Alexis Blond`,
-    authorDescription: "try to make the world better",
+    socials: {
+      linkedin: "https://www.linkedin.com/in/pierre-alexis-blond-00924b158/",
+      twitter: "https://twitter.com/_pablond",
+      github: "https://github.com/PABlond"
+    },
   },
   plugins: [
     {

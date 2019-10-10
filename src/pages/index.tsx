@@ -1,11 +1,11 @@
 import React from "react"
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './../assets/styles/style.scss'
+import "bootstrap/dist/css/bootstrap.min.css"
+import "./../assets/styles/style.scss"
 import { graphql } from "gatsby"
-import { Link } from "gatsby"
-import {Container, Row} from 'react-bootstrap'
-import Header from './../components/Header'
-import Footer from './../components/Footer'
+import { Container, Row } from "react-bootstrap"
+import Header from "./../components/Header"
+import Footer from "./../components/Footer"
+import Posts from "./../components/Posts"
 
 const IndexPage = ({ data, pageContext }) => {
   const { siteMetadata } = data.site
@@ -23,25 +23,14 @@ const IndexPage = ({ data, pageContext }) => {
   return (
     <Container fluid className="mt-1">
       <Header authorPicture={authorPicture} siteMetadata={siteMetadata} />
-      {content.map((post, i) => {
-        return (
-          <div key={i}>
-            <h3>{post.title}</h3>
-            <p>{post.date}</p>
-            <Link to={post.slug}>
-              <p>{post.excerpt}</p>
-            </Link>
-          </div>
-        )
-      })}
-
+      <Posts content={content} />
       <Footer siteMetadata={siteMetadata} />
     </Container>
   )
 }
 
 export const pageQuery = graphql`
-  query HomePageQuery{
+  query HomePageQuery {
     allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
@@ -61,7 +50,11 @@ export const pageQuery = graphql`
         author
         description
         title
-        authorDescription
+        socials {
+          linkedin
+          twitter
+          github
+        }
       }
     }
     authorPicture: file(relativePath: { eq: "author.jpg" }) {
