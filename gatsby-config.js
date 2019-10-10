@@ -5,10 +5,11 @@ module.exports = {
     title: `Not everyone can be Gandhi`,
     description: `Not everyone can be Gandhi, but each of us has the power to make sure our own lives count – and it’s those millions of lives that will ultimately build a better world. – Jeffrey Skoll`,
     author: `Pierre-Alexis Blond`,
+    authorDescription: "tries to make the world better",
     socials: {
       linkedin: "https://www.linkedin.com/in/pierre-alexis-blond-00924b158/",
       twitter: "https://twitter.com/_pablond",
-      github: "https://github.com/PABlond"
+      github: "https://github.com/PABlond",
     },
   },
   plugins: [
@@ -27,6 +28,13 @@ module.exports = {
       },
     },
     {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: path.join(__dirname, `src/assets/images`),
+      },
+    },
+    {
       resolve: `gatsby-plugin-manifest`,
       options: {
         name: `gatsby-starter-default`,
@@ -41,22 +49,16 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
+
+        excerpt_separator: `<!-- cover -->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
             options: {
-              maxWidth: 620,
               linkImagesToOriginal: false,
             },
           },
         ],
-      },
-    },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: path.join(__dirname, `src/assets/images`),
       },
     },
     `gatsby-plugin-react-helmet`,

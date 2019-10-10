@@ -7,19 +7,19 @@ import Header from "./../components/Header"
 import Footer from "./../components/Footer"
 import Posts from "./../components/Posts"
 
-const IndexPage = ({ data, pageContext }) => {
+const IndexPage = ({ data }) => {
   const { siteMetadata } = data.site
   const content = data.allMarkdownRemark.edges.map(mod => {
     const {
-      frontmatter: { title, date },
+      frontmatter: { title, date, featuredImage: {childImageSharp} },
       excerpt,
       fields: { slug },
     } = mod.node
-    return { title, date, excerpt, slug }
+    return { title, date, excerpt, slug, childImageSharp }
   })
   const authorPicture = data.authorPicture.childImageSharp
 
-  console.log(data, pageContext)
+  console.log(data)
   return (
     <Container fluid className="mt-1">
       <Header authorPicture={authorPicture} siteMetadata={siteMetadata} />
@@ -41,6 +41,13 @@ export const pageQuery = graphql`
           frontmatter {
             title
             date(formatString: "MMMM DD, YYYY")
+            featuredImage {
+              childImageSharp {
+                fluid(maxWidth: 400) {
+                  src
+                }
+              }
+            }
           }
         }
       }
@@ -48,6 +55,7 @@ export const pageQuery = graphql`
     site {
       siteMetadata {
         author
+        authorDescription
         description
         title
         socials {

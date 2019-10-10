@@ -1,50 +1,26 @@
 import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
 import { FaList, FaGripVertical } from "react-icons/fa"
+import LastContent from "./LastContent"
+import OldContent from './OldContent'
 
 export default ({ content }) => {
-  const [ui, setUi] = useState<{
-    isMobile: Boolean
-    column: Boolean
-  }>({
-    isMobile: true,
-    column: true,
-  })
-
-  useEffect(() => {
-    if (typeof window !== `undefined`) {
-      if (window.innerWidth > 768) setUi({ ...ui, isMobile: false })
-    }
-  }, [])
-
+  console.log(content)
+  const [isUICol, setIsUICol] = useState<boolean>(true)
   return (
     <>
-      {!ui.isMobile && (
-        <div id="ui-posts-selector">
-          <div>
-            <a onClick={() => setUi({ ...ui, column: false })}>
-              <FaList />
-            </a>
-            <a onClick={() => setUi({ ...ui, column: true })}>
-              <FaGripVertical />
-            </a>
-          </div>
+      <div id="ui-posts-selector">
+        <div>
+          <a onClick={() => setIsUICol(false)}>
+            <FaList />
+          </a>
+          <a onClick={() => setIsUICol(true)}>
+            <FaGripVertical />
+          </a>
         </div>
-      )}
-
+      </div>
       <section id="posts">
-        {content.map((post, i: number) => {
-          return (
-            <div className={ui.column ? "col-md-6" : "post-row"} key={i}>
-              <h3>{post.title}</h3>
-              <Link to={post.slug}>
-                <p>{post.excerpt}</p>
-              </Link>
-
-              <p className="post-date">{post.date}</p>
-            </div>
-          )
-        })}
+        <LastContent content={content.slice(0, 4)} isUICol={isUICol} />
+        <OldContent content={content.slice(4)} />
       </section>
     </>
   )

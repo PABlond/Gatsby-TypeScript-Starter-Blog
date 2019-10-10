@@ -2,8 +2,10 @@
 title: "Title of post 2"
 date: "2019-09-21"
 cover: "gandhi-1.jpg"
----
+description: "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text"
+featuredImage: ./imgs/gandhi-1.jpg
 
+---
 
 ## What is Lorem Ipsum?
 

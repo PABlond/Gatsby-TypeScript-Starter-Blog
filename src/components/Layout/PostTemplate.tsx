@@ -4,12 +4,11 @@ import { graphql, navigate } from "gatsby"
 import Img from "gatsby-image"
 
 export default ({ data, pageContext }) => {
-  console.log(data, pageContext)
   const imgProps = data.fileName.childImageSharp
   return (
     <>
       <button className="mt-5" onClick={() => navigate("/")}>Back</button>
-      <Img  {...imgProps} />
+      {/* <Img  {...imgProps} /> */}
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </>
   )
@@ -21,6 +20,7 @@ export const pageQuery = graphql`
       fields {
         slug
       }
+      excerpt
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
