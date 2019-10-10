@@ -1,11 +1,13 @@
 import React, { useState } from "react"
 import { Link } from "gatsby"
+import { FaAngleDoubleLeft, FaAngleDoubleRight } from "react-icons/fa"
 
 export default ({ content }) => {
   const [slice, setSlice] = useState<number[]>([0, 2])
   console.log(content)
   return (
     <div id="old-posts">
+      <h3>Older posts</h3>
       <div id="old-posts-content">
         {content.slice(slice[0], slice[1]).map((post, i: number) => {
           return (
@@ -24,13 +26,13 @@ export default ({ content }) => {
           disabled={!!!(slice[0] > 0)}
           onClick={() => setSlice([slice[0] - 2, slice[1] - 2])}
         >
-          {"<"}
+          <FaAngleDoubleLeft />
         </button>
         <button
           disabled={!!!(slice[1] < content.length)}
           onClick={() => setSlice([slice[0] + 2, slice[1] + 2])}
         >
-          {">"}
+          <FaAngleDoubleRight />
         </button>
       </div>
     </div>

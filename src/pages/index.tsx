@@ -4,6 +4,7 @@ import "./../assets/styles/style.scss"
 import { graphql } from "gatsby"
 import { Container, Row } from "react-bootstrap"
 import Header from "./../components/Header"
+import About from "./../components/About"
 import Footer from "./../components/Footer"
 import Posts from "./../components/Posts"
 
@@ -11,7 +12,11 @@ const IndexPage = ({ data }) => {
   const { siteMetadata } = data.site
   const content = data.allMarkdownRemark.edges.map(mod => {
     const {
-      frontmatter: { title, date, featuredImage: {childImageSharp} },
+      frontmatter: {
+        title,
+        date,
+        featuredImage: { childImageSharp },
+      },
       excerpt,
       fields: { slug },
     } = mod.node
@@ -22,7 +27,8 @@ const IndexPage = ({ data }) => {
   console.log(data)
   return (
     <Container fluid className="mt-1">
-      <Header authorPicture={authorPicture} siteMetadata={siteMetadata} />
+      <Header siteMetadata={siteMetadata} />
+      <About authorPicture={authorPicture} siteMetadata={siteMetadata} />
       <Posts content={content} />
       <Footer siteMetadata={siteMetadata} />
     </Container>

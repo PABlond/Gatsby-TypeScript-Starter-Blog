@@ -3,17 +3,21 @@ import React from "react"
 import { graphql, navigate } from "gatsby"
 import Img from "gatsby-image"
 import Header from "./../Header"
+import Footer from './../Footer'
+
 export default ({ data }) => {
   console.log(data)
   const imgProps = data.markdownRemark.frontmatter.featuredImage.childImageSharp
   return (
     <>
-      <Header
-        siteMetadata={data.site.siteMetadata}
-        authorPicture={data.authorPicture.childImageSharp}
-      />
-      <Img {...imgProps} />
-      <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      <Header siteMetadata={data.site.siteMetadata} />
+      <section id="post">
+        <div id="cover-image">
+          <Img {...imgProps} />
+        </div>
+        <div id="post-content" dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
+      </section>
+      <Footer siteMetadata={data.site.siteMetadata} />
     </>
   )
 }
@@ -30,8 +34,8 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 900) {
-              ...GatsbyImageSharpFluid
+            fluid(maxWidth: 600) {
+              src
             }
           }
         }

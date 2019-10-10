@@ -13,24 +13,31 @@ body {
 // ****************************************************
 
 #header {
+  cursor: pointer;
   h1 {
     margin-bottom: 3rem;
     font-weight: 600;
   }
+}
 
-  #header-about {
-    display: flex;
-    align-items: center;
-    margin-bottom: 3rem;
-    p {
-      color: $grey;
-      margin-bottom: 0;
-    }
+// ****************************************************
+// ****************************************************
+//                          About
+// ****************************************************
+// ****************************************************
 
-    .author-picture {
-      margin-right: 0.5rem;
-      border-radius: 50%;
-    }
+#header-about {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3rem;
+  p {
+    color: $grey;
+    margin-bottom: 0;
+  }
+
+  .author-picture {
+    margin-right: 0.5rem;
+    border-radius: 50%;
   }
 }
 
@@ -58,11 +65,14 @@ body {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  margin-right: -15px;
-  margin-left: -15px;
+  padding-right: 15px;
+  padding-left: 15px;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1140px;
+  margin-bottom: 5rem;
 
   .col-md-6 {
-    padding: 2rem;
     color: $dark;
     text-decoration: none;
 
@@ -130,8 +140,19 @@ body {
   }
 
   #old-posts {
+    margin-top: 3rem;
+    border-top: 1px dashed $dark;
+    padding-top: 2rem;
+    width: 100%;
+
+    h3 {
+      text-decoration: underline;
+      margin-bottom: 2rem;
+      text-align: center;
+    }
+
     #old-posts-content {
-      width: 100vw;
+      width: 100%;
       display: -ms-flexbox;
       display: flex;
       align-items: center;
@@ -156,14 +177,14 @@ body {
         }
       }
     }
+
+    .old-posts-pagination {
+      button {
+        color: $dark
+      }
+    }
   }
 }
-
-// ****************************************************
-// ****************************************************
-//                          Footer
-// ****************************************************
-// ****************************************************
 
 #footer {
   // position: absolute;
@@ -180,6 +201,58 @@ body {
     a {
       margin-left: 5px;
       margin-right: 5px;
+    }
+  }
+}
+
+// ****************************************************
+// ****************************************************
+//                          Post page
+// ****************************************************
+// ****************************************************
+
+#post {
+  #cover-image {
+    max-height: 600px;
+    margin-bottom: 3rem;
+    img {
+      position: relative !important;
+      width: auto !important;
+      margin-left: auto;
+      margin-right: auto;
+      display: block;
+    }
+  }
+
+  #post-content {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1140px;
+
+    h1 {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    h2 {
+      margin-bottom: 2rem;
+    }
+
+    p {
+      margin-top: 2rem;
+      margin-bottom: 2rem;
+      color: $dark;
+    }
+
+    pre {
+      margin: 2rem;
+      background-color: $dark;
+      color: $light;
+      padding: 2rem;
+      border-radius: 10px;
     }
   }
 }
