@@ -1,21 +1,24 @@
-import 'bootstrap/dist/css/bootstrap.min.css';
+import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
 import { graphql, navigate } from "gatsby"
 import Img from "gatsby-image"
 
-export default ({ data, pageContext }) => {
-  const imgProps = data.fileName.childImageSharp
+export default ({ data }) => {
+  console.log(data)
+  const imgProps = data.markdownRemark.frontmatter.featuredImage.childImageSharp
   return (
     <>
-      <button className="mt-5" onClick={() => navigate("/")}>Back</button>
-      {/* <Img  {...imgProps} /> */}
+      <button className="mt-5" onClick={() => navigate("/")}>
+        Back
+      </button>
+      <Img  {...imgProps} />
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </>
   )
 }
 
 export const pageQuery = graphql`
-  query($path: String!, $cover: String!) {
+  query($path: String!) {
     markdownRemark(fields: { slug: { eq: $path } }) {
       fields {
         slug
@@ -24,12 +27,12 @@ export const pageQuery = graphql`
       html
       frontmatter {
         date(formatString: "MMMM DD, YYYY")
-      }
-    }
-    fileName: file(relativePath: { eq: $cover }) {
-      childImageSharp {
-        fluid(maxWidth: 700) {
-          ...GatsbyImageSharpFluid
+        featuredImage {
+          childImageSharp {
+            fluid(maxWidth: 400) {
+              ...GatsbyImageSharpFluid
+            }
+          }
         }
       }
     }

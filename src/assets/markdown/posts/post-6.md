@@ -1,9 +1,9 @@
 ---
-title: "Title of post 1"
-date: "2019-09-19T23:19:51.246Z"
-cover: "gandhi-1.jpg"
-description: "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout"
-featuredImage: ./imgs/gandhi-1.jpg
+title: "Wow, does that work?"
+date: "2019-09-07T23:19:51.246Z"
+cover: "landscape-4532546_640.jpg"
+description: Nec ferarum propior. Mermeros valle ora longe dolet, arma caro. Rura carina, fassusque oscula molirique audito est huius contenta radice sole ars ipse dixerat.
+featuredImage: ./imgs/landscape-4532546_640.jpg
 ---
 
 ## Why do we use it?
