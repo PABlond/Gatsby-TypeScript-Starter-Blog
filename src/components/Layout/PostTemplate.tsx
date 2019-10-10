@@ -2,16 +2,17 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
 import { graphql, navigate } from "gatsby"
 import Img from "gatsby-image"
-
+import Header from "./../Header"
 export default ({ data }) => {
   console.log(data)
   const imgProps = data.markdownRemark.frontmatter.featuredImage.childImageSharp
   return (
     <>
-      <button className="mt-5" onClick={() => navigate("/")}>
-        Back
-      </button>
-      <Img  {...imgProps} />
+      <Header
+        siteMetadata={data.site.siteMetadata}
+        authorPicture={data.authorPicture.childImageSharp}
+      />
+      <Img {...imgProps} />
       <div dangerouslySetInnerHTML={{ __html: data.markdownRemark.html }} />
     </>
   )
@@ -29,10 +30,30 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         featuredImage {
           childImageSharp {
-            fluid(maxWidth: 400) {
+            fluid(maxWidth: 900) {
               ...GatsbyImageSharpFluid
             }
           }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        authorDescription
+        description
+        title
+        socials {
+          linkedin
+          twitter
+          github
+        }
+      }
+    }
+    authorPicture: file(relativePath: { eq: "author.jpg" }) {
+      childImageSharp {
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
