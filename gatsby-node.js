@@ -6,7 +6,7 @@ const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
 exports.createPages = ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve(`src/templates/postTemplate.tsx`)
+  const postTemplate = path.resolve(`src/components/Layout/PostTemplate.tsx`)
 
   return graphql(`
     {
@@ -18,6 +18,9 @@ exports.createPages = ({ actions, graphql }) => {
           node {
             fields {
               slug
+            }
+            frontmatter {
+              cover
             }
           }
         }
@@ -31,19 +34,24 @@ exports.createPages = ({ actions, graphql }) => {
       createPage({
         path: replacePath(node.fields.slug),
         component: postTemplate,
-        context: {}, // additional data can be passed via context
+        context: { cover: node.frontmatter.cover },
       })
     })
   })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField } = actions
+  const { createNodeField, createPage } = actions
   if (node.internal.type === `MarkdownRemark`) {
     const slug = createFilePath({ node, getNode, basePath: `pages` })
     createNodeField({
       node,
       name: `slug`,
+      value: replacePath(slug),
+    })
+    createNodeField({
+      node,
+      name: `cover`,
       value: replacePath(slug),
     })
   }

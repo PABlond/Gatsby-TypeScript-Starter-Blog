@@ -1,6 +1,7 @@
 ---
 title: "Title of post 2"
 date: "2019-09-21"
+cover: "gandhi-1.jpg"
 ---
 
 

@@ -1,39 +1,48 @@
 import React from "react"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './../assets/styles/style.scss'
 import { graphql } from "gatsby"
 import { Link } from "gatsby"
+import {Container, Row} from 'react-bootstrap'
+import Header from './../components/Header'
+import Footer from './../components/Footer'
 
-const IndexPage = ({ data }) => {
-  console.log(data.allMarkdownRemark.edges[0].node.htmlAst)
+const IndexPage = ({ data, pageContext }) => {
+  const { siteMetadata } = data.site
   const content = data.allMarkdownRemark.edges.map(mod => {
-    return {
-      title: mod.node.frontmatter.title,
-      id: mod.node.id,
-      date: mod.node.frontmatter.date,
-      excerpt: mod.node.excerpt,
-      slug: mod.node.fields.slug
-    }
+    const {
+      frontmatter: { title, date },
+      excerpt,
+      fields: { slug },
+    } = mod.node
+    return { title, date, excerpt, slug }
   })
+  const authorPicture = data.authorPicture.childImageSharp
+
+  console.log(data, pageContext)
   return (
-    <>
-      <h1>Homepage</h1>
-      {content.map(post => {
+    <Container fluid className="mt-1">
+      <Header authorPicture={authorPicture} siteMetadata={siteMetadata} />
+      {content.map((post, i) => {
         return (
-          <>
-            <h1>{post.title}</h1>
+          <div key={i}>
+            <h3>{post.title}</h3>
             <p>{post.date}</p>
             <Link to={post.slug}>
               <p>{post.excerpt}</p>
             </Link>
-          </>
+          </div>
         )
       })}
-    </>
+
+      <Footer siteMetadata={siteMetadata} />
+    </Container>
   )
 }
 
 export const pageQuery = graphql`
-  query HomePageQuery {
-    allMarkdownRemark {
+  query HomePageQuery{
+    allMarkdownRemark(sort: { order: DESC, fields: [frontmatter___date] }) {
       edges {
         node {
           excerpt(pruneLength: 100)
@@ -44,6 +53,21 @@ export const pageQuery = graphql`
             title
             date(formatString: "MMMM DD, YYYY")
           }
+        }
+      }
+    }
+    site {
+      siteMetadata {
+        author
+        description
+        title
+        authorDescription
+      }
+    }
+    authorPicture: file(relativePath: { eq: "author.jpg" }) {
+      childImageSharp {
+        fixed(width: 40, height: 40) {
+          ...GatsbyImageSharpFixed
         }
       }
     }
