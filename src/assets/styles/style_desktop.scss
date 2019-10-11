@@ -204,9 +204,25 @@ h3 {
       }
     }
 
-    .old-posts-pagination {
+    #old-posts-pagination {
+      display: flex;
+      justify-content: flex-end;
+      
       button {
-        color: $dark;
+        padding: 1rem;
+        color: $grey;
+        margin: 1px;
+        background: $light;
+        border: 0;
+        font-size: 1.5rem;
+        &:hover {
+          font-weight: 600;
+        }
+      }
+
+      .disable {
+        color: $light;
+        border: 0;
       }
     }
   }
@@ -287,7 +303,7 @@ h3 {
     }
 
     a {
-      color: $main-color
+      color: $main-color;
     }
 
     pre {

@@ -24,6 +24,7 @@ export default ({ content }) => {
       <div id="old-posts-pagination">
         <button
           disabled={!!!(slice[0] > 0)}
+          className={!!!(slice[0] > 0) && 'disable'}
           onClick={() => setSlice([slice[0] - 2, slice[1] - 2])}
           aria-label="Previous posts"
         >
@@ -31,6 +32,7 @@ export default ({ content }) => {
         </button>
         <button
           disabled={!!!(slice[1] < content.length)}
+          className={!!!(slice[1] < content.length) && 'disable'}
           onClick={() => setSlice([slice[0] + 2, slice[1] + 2])}
           aria-label="Next posts"
         >
