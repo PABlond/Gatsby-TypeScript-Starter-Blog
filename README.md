@@ -1,4 +1,4 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/bfd3cbfa-5471-4593-841b-fd3674546cc7/deploy-status)](https://app.netlify.com/sites/pedantic-hoover-d62fa7/deploys)
+[![Netlify Status](https://api.netlify.com/api/v1/badges/f57f32f5-b56e-425b-874f-ab114916b8f1/deploy-status)](https://friendly-cray-96d631.netlify.com/)
 
 This repository is a boilerplate of a blog app. The starter was build using Gatsby and Typescript. 
 
