@@ -25,12 +25,14 @@ export default ({ content }) => {
         <button
           disabled={!!!(slice[0] > 0)}
           onClick={() => setSlice([slice[0] - 2, slice[1] - 2])}
+          aria-label="Previous posts"
         >
           <FaAngleDoubleLeft />
         </button>
         <button
           disabled={!!!(slice[1] < content.length)}
           onClick={() => setSlice([slice[0] + 2, slice[1] + 2])}
+          aria-label="Next posts"
         >
           <FaAngleDoubleRight />
         </button>
