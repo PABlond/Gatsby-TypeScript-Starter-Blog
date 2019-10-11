@@ -6,5 +6,5 @@ export interface IPostsContent {
   date: string
   excerpt: string
   slug: string
-  childImageSharp: GatsbyImageProps
+  childImageSharp?: GatsbyImageProps
 }
