@@ -1,10 +1,15 @@
 const path = require(`path`)
 
+const author = {
+  firstname: "Pierre-Alexis",
+  lastname: "Blond"
+}
+
 module.exports = {
   siteMetadata: {
-    title: `Pierre-Alexis's Blog`,
+    title: `${author.firstname}'s Blog`,
     description: `Not everyone can be Gandhi, but each of us has the power to make sure our own lives count – and it’s those millions of lives that will ultimately build a better world. – Jeffrey Skoll`,
-    author: `Pierre-Alexis Blond`,
+    author: `${author.firstname} ${author.lastname}`,
     authorDescription: "tries to make the world better",
     socials: {
       linkedin: "https://www.linkedin.com/in/pierre-alexis-blond-00924b158/",
@@ -33,7 +38,7 @@ module.exports = {
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        path: `${__dirname}/src/assets/markdown`,
+        path: `${__dirname}/content/markdown`,
         name: `markdown-pages`,
       },
     },
