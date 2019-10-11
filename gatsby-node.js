@@ -3,9 +3,7 @@ const path = require("path")
 
 const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
 
-exports.createPages = async ({ actions, graphql }) => {
-  const { createPage } = actions
-
+exports.createPages = async ({ actions: { createPage }, graphql }) => {
   const postTemplate = path.resolve(`src/components/Post/index.tsx`)
 
   const result = await graphql(`
