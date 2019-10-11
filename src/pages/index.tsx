@@ -3,10 +3,8 @@ import "./../assets/styles/style.scss"
 import { graphql } from "gatsby"
 import { IHomeRequest } from "./../interfaces/requests.interface"
 
-import Head from "./../components/Head"
-import Header from "./../components/Header"
+import Layout from "./../components/Layout"
 import About from "./../components/About"
-import Footer from "./../components/Footer"
 import Posts from "./../components/Posts"
 
 const IndexPage = ({ data }: { data: IHomeRequest }) => {
@@ -28,13 +26,10 @@ const IndexPage = ({ data }: { data: IHomeRequest }) => {
   const authorPicture = data.authorPicture.childImageSharp
 
   return (
-    <>
-      <Head siteMetadata={siteMetadata} pageName={"Homepage"} />
-      <Header siteMetadata={siteMetadata} />
+    <Layout siteMetadata={siteMetadata} title="Homepage">
       <About authorPicture={authorPicture} siteMetadata={siteMetadata} />
       <Posts content={content} />
-      <Footer siteMetadata={siteMetadata} />
-    </>
+    </Layout>
   )
 }
 

@@ -5,38 +5,33 @@ import { IPostRequest } from "./../../interfaces/requests.interface"
 import { GatsbyImageProps } from "gatsby-image/index"
 
 import Img from "gatsby-image"
-import Head from "./../Head"
-import Header from "./../Header"
+import Layout from './../Layout'
 import About from "./../About"
 import OlderPosts from "./../Posts/OldContent"
-import Footer from "./../Footer"
 
 export default ({ data }: { data: IPostRequest }) => {
+  // Helper to organize useful data in request
   const {
     site: { siteMetadata },
     markdownRemark: {
       frontmatter: { featuredImage, title },
       html,
     },
+    authorPicture: { childImageSharp: authorPicture },
   } = data
   const imgProps = featuredImage.childImageSharp
   const content = data.allMarkdownRemark.edges.map(mod => {
     const {
-      frontmatter: {
-        title,
-        date,
-      },
+      frontmatter: { title, date },
       timeToRead,
       excerpt,
       fields: { slug },
     } = mod.node
     return { title, timeToRead, date, excerpt, slug }
   })
-console.log(imgProps)
+
   return (
-    <>
-      <Head siteMetadata={siteMetadata} pageName={title} />
-      <Header siteMetadata={siteMetadata} />
+    <Layout siteMetadata={siteMetadata} title={title}>
       <section id="post">
         <h1 id="post-title">{title}</h1>
         <div id="cover-image">
@@ -45,16 +40,12 @@ console.log(imgProps)
         <div id="post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </section>
       <section id="about-post">
-        <About
-          siteMetadata={siteMetadata}
-          authorPicture={data.authorPicture.childImageSharp}
-        />
+        <About siteMetadata={siteMetadata} authorPicture={authorPicture} />
       </section>
       <section id="post-old-posts">
         <OlderPosts content={content} title="Newest posts" />
       </section>
-      <Footer siteMetadata={siteMetadata} />
-    </>
+    </Layout>
   )
 }
 

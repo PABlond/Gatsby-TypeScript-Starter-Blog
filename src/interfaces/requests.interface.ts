@@ -19,6 +19,20 @@ export interface IAllMarkdownRemark {
   }[]
 }
 
+export interface ISiteMetadata {
+  author: string
+  authorDescription: string
+  description: string
+  title: string
+  socials: {
+    linkedin: string
+    twitter: string
+    github: string
+  }
+  themeColor: string
+  siteUrl: string
+}
+
 export interface IHomeRequest {
   allMarkdownRemark: IAllMarkdownRemark
   site: {
@@ -60,19 +74,7 @@ export interface IPostRequest {
     }
   }
   site: {
-    siteMetadata: {
-      author: string
-      authorDescription: string
-      description: string
-      title: string
-      socials: {
-        linkedin: string
-        twitter: string
-        github: string
-      }
-      themeColor: string
-      siteUrl: string
-    }
+    siteMetadata: ISiteMetadata
   }
   authorPicture: {
     childImageSharp: GatsbyImageProps
