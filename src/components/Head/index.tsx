@@ -12,5 +12,6 @@ export default ({
     <link rel="canonical" href={siteUrl} />
     <meta name="description" content={description} />
     <meta name="theme-color" content={themeColor || "#fff"} />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
   </Helmet>
 )
