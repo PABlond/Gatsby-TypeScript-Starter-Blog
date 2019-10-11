@@ -1,11 +1,10 @@
 {
-  "name": "gatsby-starter-default",
+  "name": "gatsby-typescript-starter-blog",
   "private": true,
-  "description": "A simple starter to get up and developing quickly with Gatsby",
+  "description": "Gatsby/Typescript Starter for blogs project",
   "version": "0.1.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": "Pierre-Alexis Blond",
   "dependencies": {
-    "@apollo/react-hooks": "^3.1.2",
     "@types/react-helmet": "^5.0.11",
     "bootstrap": "^4.3.1",
     "gatsby": "^2.15.34",
@@ -48,9 +47,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/PABlond/Gatsby-TypeScript-Starter-Blog.git"
   },
   "bugs": {
-    "url": "https://github.com/gatsbyjs/gatsby/issues"
+    "url": "https://github.com/PABlond/Gatsby-TypeScript-Starter-Blog/issues"
   }
 }
