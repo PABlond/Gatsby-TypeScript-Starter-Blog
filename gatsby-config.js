@@ -11,7 +11,7 @@ module.exports = {
       twitter: "https://twitter.com/_pablond",
       github: "https://github.com/PABlond",
     },
-    themeColor: "#fff",
+    themeColor: "#5c821a",
     siteUrl: "https://friendly-cray-96d631.netlify.com/",
   },
   plugins: [
@@ -50,10 +50,10 @@ module.exports = {
         name: `gatsby-starter-default`,
         short_name: `starter`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#fff`,
+        theme_color: `#5c821a`,
         display: `minimal-ui`,
-        icon: `src/assets/images/gatsby-icon.png`, // This path is relative to the root of the site.
+        icon: `src/assets/images/gatsby-icon.png`,
       },
     },
     {
