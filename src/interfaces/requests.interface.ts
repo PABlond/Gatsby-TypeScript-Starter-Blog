@@ -1,18 +1,5 @@
 import { GatsbyImageProps } from "gatsby-image/index"
 
-export interface IImgFluid {
-  fluid: {
-    aspectRatio?: number
-    src: string
-    srcSet?: string
-    sizes?: string
-    base64?: string
-    tracedSVG?: string
-    srcWebp?: string
-    srcSetWebp?: string
-  }
-}
-
 export interface IAllMarkdownRemark {
   edges: {
     node: {
