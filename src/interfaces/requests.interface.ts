@@ -13,24 +13,27 @@ export interface IImgFluid {
   }
 }
 
-export interface IHomeRequest {
-  allMarkdownRemark: {
-    edges: {
-      node: {
-        excerpt: string
-        fields: {
-          slug: string
-        }
-        frontmatter: {
-          title: string
-          date: string
-          featuredImage: {
-            childImageSharp: GatsbyImageProps
-          }
+export interface IAllMarkdownRemark {
+  edges: {
+    node: {
+      timeToRead: Number
+      excerpt: string
+      fields: {
+        slug: string
+      }
+      frontmatter: {
+        title: string
+        date: string
+        featuredImage: {
+          childImageSharp: GatsbyImageProps
         }
       }
-    }[]
-  }
+    }
+  }[]
+}
+
+export interface IHomeRequest {
+  allMarkdownRemark: IAllMarkdownRemark
   site: {
     siteMetadata: {
       author: string
@@ -54,6 +57,7 @@ export interface IHomeRequest {
 }
 
 export interface IPostRequest {
+  allMarkdownRemark: IAllMarkdownRemark
   markdownRemark: {
     fields: {
       slug: string

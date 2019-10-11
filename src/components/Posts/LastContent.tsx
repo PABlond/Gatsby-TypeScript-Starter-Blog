@@ -24,7 +24,10 @@ export default ({
           />
           <p>{post.excerpt}</p>
 
-          <p className="post-date">{post.date}</p>
+          <p className="post-bottom">
+            <span className="post-to-read">{post.timeToRead} min to read</span>
+            <span className="post-date">{post.date}</span>
+          </p>
         </Link>
       ) : (
         <Link to={post.slug} className="post-row" key={i}>
@@ -36,7 +39,12 @@ export default ({
             <h3>{post.title}</h3>
             <p>{post.excerpt}</p>
 
-            <p className="post-date">{post.date}</p>
+            <p className="post-bottom">
+              <span className="post-to-read">
+                {post.timeToRead} min to read
+              </span>
+              <span className="post-date">{post.date}</span>
+            </p>
           </div>
         </Link>
       )

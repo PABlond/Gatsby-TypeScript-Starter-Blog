@@ -18,10 +18,11 @@ const IndexPage = ({ data }: { data: IHomeRequest }) => {
         date,
         featuredImage: { childImageSharp },
       },
+      timeToRead,
       excerpt,
       fields: { slug },
     } = mod.node
-    return { title, date, excerpt, slug, childImageSharp }
+    return { title, timeToRead, date, excerpt, slug, childImageSharp }
   })
   const { siteMetadata } = data.site
   const authorPicture = data.authorPicture.childImageSharp
@@ -43,6 +44,7 @@ export const pageQuery = graphql`
       edges {
         node {
           excerpt(pruneLength: 100)
+          timeToRead
           fields {
             slug
           }

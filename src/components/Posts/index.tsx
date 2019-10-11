@@ -21,7 +21,7 @@ export default ({ content }: { content: IPostsContent[] }) => {
       </div>
       <section id="posts">
         <LastContent content={content.slice(0, 4)} isUICol={isUICol} />
-        <OldContent content={content.slice(4)} />
+        <OldContent content={content.slice(4)}  title={undefined} />
       </section>
     </>
   )

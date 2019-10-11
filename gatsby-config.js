@@ -10,7 +10,7 @@ module.exports = {
     title: `${author.firstname}'s Blog`,
     description: `Not everyone can be Gandhi, but each of us has the power to make sure our own lives count – and it’s those millions of lives that will ultimately build a better world. – Jeffrey Skoll`,
     author: `${author.firstname} ${author.lastname}`,
-    authorDescription: "tries to make the world better",
+    authorDescription: "tries to make the world a better place",
     socials: {
       linkedin: "https://www.linkedin.com/in/pierre-alexis-blond-00924b158/",
       twitter: "https://twitter.com/_pablond",
