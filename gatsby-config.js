@@ -12,16 +12,16 @@ module.exports = {
       github: "https://github.com/PABlond",
     },
     themeColor: "#fff",
-    siteUrl: "https://friendly-cray-96d631.netlify.com/"
+    siteUrl: "https://friendly-cray-96d631.netlify.com/",
   },
   plugins: [
     {
-      resolve: 'gatsby-plugin-web-font-loader',
+      resolve: "gatsby-plugin-web-font-loader",
       options: {
         google: {
-          families: ['Mansalva', 'Playfair Display', 'Source Sans Pro']
-        }
-      }
+          families: ["Mansalva", "Playfair Display", "Source Sans Pro"],
+        },
+      },
     },
     {
       resolve: `gatsby-source-filesystem`,
@@ -74,5 +74,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-typescript`,
     `gatsby-plugin-sass`,
+    `gatsby-plugin-offline`,
   ],
 }
