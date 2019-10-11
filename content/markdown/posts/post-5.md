@@ -5,11 +5,12 @@ cover: "landscape-4521413_640.jpg"
 description: Somnus a tamen, incunabula gelidis Phoebe iste adductaque diducit pineta, de! Lumina semper? Vir et tellus populi ulterius saucius illac secuta.
 featuredImage: ./imgs/landscape-4521413_640.jpg
 ---
+
 # Tepidi tegebat quem late movetur sarcina sumit
 
 ## Manu pares dolentis
 
-Lorem markdownum curat, terras, *piscibus suo*, non crescunt tellus latrantis
+Lorem markdownum curat, terras, _piscibus suo_, non crescunt tellus latrantis
 gerebat nunc eodem? Loco reparata nec mora at quamvis texit, facit nefas sunt
 volucres.
 
@@ -41,7 +42,7 @@ moenibus Phineus ferre? Nam denum thalami obstitit puer factoque.
 
 Nati Atlas medioque, fugiebant semper inferiusque dictis cetera pectore ne nihil
 velis caesae patria pharetratae illos. Ammon vates vultu mentior fruetur,
-iugeribus *modo*, suscipimus; et nemus reppulerint trepidare fidesque. Quidem
+iugeribus _modo_, suscipimus; et nemus reppulerint trepidare fidesque. Quidem
 lacrimaeque locis. Fuit dei **Actaeon** superum artus, circumtulit et est
 tacito, ab recessit.
 
@@ -52,7 +53,7 @@ tacito, ab recessit.
 
 Non clipei auctor montana, huic cursus, mea **vox flectique**. Tum viscera
 remisit cinerem praeceps. Ora nudaeque vitane Salmacis tauro. Puto vani ex crura
-stellas haec mei: sidera *aura fors* longi, grator.
+stellas haec mei: sidera _aura fors_ longi, grator.
 
 Et eburnea iaculi litore, obrue suspendit summa, nescio tua. Fuderat trabeati
 vocari nutantia; ignis tamen tollens. Regna amnis Acmona et dixit retraxi

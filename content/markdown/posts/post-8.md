@@ -10,8 +10,8 @@ featuredImage: ./imgs/gandhi-1.jpg
 
 ## Poscit herbis nec Troius canitie pariterque et
 
-Lorem markdownum danti perdiderim, opes aptos *detrahitur modo cupidine*
-caelesti arcet, tanto formidabilis aura. Preces qui alma quoque *tenet et*
+Lorem markdownum danti perdiderim, opes aptos _detrahitur modo cupidine_
+caelesti arcet, tanto formidabilis aura. Preces qui alma quoque _tenet et_
 confessis totiens gravi reminiscitur mediam pro.
 
 ## Ait diversa insidiosa cernens terga et quae
@@ -21,7 +21,7 @@ Iovis non!
 
 ## Dies quem fuit Hippasus hunc volumine
 
-Inposita quae cavo alimentaque *uncis lentae* nunc
+Inposita quae cavo alimentaque _uncis lentae_ nunc
 [mollita](http://filia-deprensa.com/), tractata amplexus: capro cum factum.
 Nimbos [veterumque](http://quam.io/), non seque hostesque partes. Curva magna si
 illic? Est piscem, **vinctus ne** sortem Iuppiter Troiaeque curvata tamen. Mora
@@ -30,7 +30,7 @@ atque, hoc?
 
 Deos avium ipsum: multi fugit qui **rebus**, dedit religione emissumque
 **filius**. Quoque quam iniqui ignem; quam parat accensus clamantia mundus aras
-medio *aevo*.
+medio _aevo_.
 
 ## Cum omnia meruisse annis habebat ubi manus
 
@@ -45,13 +45,13 @@ remissis nec numina dixerat volucrumque habet, igitur.
 ## Fecit curae
 
 Talia eram tepescunt eundem erat frontem felicia, neve muneris novissima
-quantumque simulacra *linguam*, prius sibi noviens leonem, dat. Non pastor
+quantumque simulacra _linguam_, prius sibi noviens leonem, dat. Non pastor
 Orphea Anaxarete sede dummodo cuncta sumo venit alimentaque nil manus aera, deus
 legi ego, a.
 
-De nunc meruique fuerat; et canebat ipsi *gemuit temptatum vivit*, quae, huius.
+De nunc meruique fuerat; et canebat ipsi _gemuit temptatum vivit_, quae, huius.
 Iustis passis sedit magna committit quid praebere **veros Iuppiter**; derat
 vivacisque? Primas auctore barbarus, bucina Hyperionis est cruorem aulaea,
 profecit. Albas sed fugis; coloribus vitiataque tamen intravit Pandioniae
-quidquid rogum nec insidiaeque. Siqua coegi pleno concipit *et sibi* viae cannis
-moenia *tactis quo Achivi* urbis *tellus* reverentia.
+quidquid rogum nec insidiaeque. Siqua coegi pleno concipit _et sibi_ viae cannis
+moenia _tactis quo Achivi_ urbis _tellus_ reverentia.

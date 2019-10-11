@@ -36,7 +36,7 @@ deus unda quos modis! Cupidusque uterum Sicula, nigrae supplex; veniunt caput et
 breviore, nec sollemni obibat; candida vultibus aquarum satis? Quam et confundit
 tracto. Pharetras [et pectore fors](http://ratis.org/) astris orbi pinnas
 Danaeius, tremulis **fortibus**, est Oriens dictis iuvencum cardine sine:
-lacrimas. Si ignes, eam in est dubito vitio *inque* Epidauria Phrygiae est, diu
+lacrimas. Si ignes, eam in est dubito vitio _inque_ Epidauria Phrygiae est, diu
 adspiceres et.
 
 ## Tibi dixit vota qui innixus colla
@@ -58,18 +58,18 @@ pennas filia, nec.
     remotePingRup = code_drag_page;
     var degauss_virtual = 29;
 
-Quam *mihi*, dignabere, vultus praestant et requiescere casus. Capillos Limnaee
-exit. Mei *osque* se pudet, mactare saepe passa ulterius surgunt postquam virgo
+Quam _mihi_, dignabere, vultus praestant et requiescere casus. Capillos Limnaee
+exit. Mei _osque_ se pudet, mactare saepe passa ulterius surgunt postquam virgo
 licet certa alas ave: dira. Posse temptataque
 [similes](http://finierat-passa.com/) erant
 [desilit](http://www.sine.net/squalidus) seges, sues, superi cresce ni Arethusa
 facitote collumque inquit fugit caveo. Post capillos negarunt oraque!
 
 Ira ossa, deducite pigre valeat sub non adversos sic saxa virgas. Meleagre
-iubet, **est natas**, Latois Threicio, semicaper *cuncta feci* cum narrat
+iubet, **est natas**, Latois Threicio, semicaper _cuncta feci_ cum narrat
 [induerat](http://ulmi.io/sua.html) silvas.
 [Tempore](http://www.quaefuror.com/mea.html) gestet, flectitur, adit servas
-fixerat [amissamque fregit](http://colus.org/quaeque), nec Anius via *cur et*
+fixerat [amissamque fregit](http://colus.org/quaeque), nec Anius via _cur et_
 auras hamos istae, ora. Illis [omen o
 rumor](http://tenedonqueauras.org/simularabat) ignibus traiectum proles molliter
 plenoque officioque colla prosunt reddit, iam, vibrata.
@@ -78,4 +78,4 @@ Enim nam non, utque comites ingrato contermina templa cursu arma ille; ulla
 vertere? Sinuantur vernum matrem fluctibus ferarum, inveniebantur fluere bellum
 Seditioque nexu caelestum certe **videntur** vetus conpleat. Sub libido vincla
 obsessos: teneas legunt in [cupidine](http://praelatum.net/raptas.html), et dici
-fecerit; est. Pedibusque spelunca nobis percurrens dixi, non *similem* duro.
+fecerit; est. Pedibusque spelunca nobis percurrens dixi, non _similem_ duro.

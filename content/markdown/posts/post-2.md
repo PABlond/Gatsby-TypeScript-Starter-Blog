@@ -4,7 +4,6 @@ date: "2019-09-21"
 cover: "dolomites-4466357_640.jpg"
 description: Oculos et conorque umbra habenti in quascumque me iuvenes arentis est longis adstas, hoc! Optat vult Hecateidos liber humo subcrescit Rhoetus et sit mihi.
 featuredImage: ./imgs/dolomites-4466357_640.jpg
-
 ---
 
 # Ex sed quod corpore urbe

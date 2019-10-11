@@ -34,7 +34,7 @@ commune et.
 ## Tenebras est praevalidusque terrore indoluisse eiectas
 
 Apollinei precor, mora latet sub misit speciosoque ausus parat puerilibus ad
-cava, et. Hunc sideraque illam, *aut lacertis* effugit refecta! [Obvius
+cava, et. Hunc sideraque illam, _aut lacertis_ effugit refecta! [Obvius
 unus](http://www.finierat-non.io/achilles). Vestae dum ieiunia, Arcadiae et tibi
 simul secreta fretumque nomine, et nova captatur: ego est! Peto mihi et regit:
 fitque easdem **umbrasque** fonte **magnaque**: repetenda tacitae cervum se

@@ -41,7 +41,7 @@ relevasse**.
 Excipit in, quem dumque dominus, quod, profugo, totidemque nuper. In infelix de
 orbem, ad hamo sanguine manu primos manu invergens Troes. Fit atque ea moratus
 natam; enim possum sibi. Idem telum: pares quam, post morte non: visa aut. Et
-quis trepidans quamvis mensas in, *auctor rustice aera*, quidem conprecor
+quis trepidans quamvis mensas in, _auctor rustice aera_, quidem conprecor
 profanos.
 
 ## Lacrimis te futuris mitis ignibus caesa
@@ -58,8 +58,8 @@ liquitur petis, unum undis.
 5. Ipse seposuisse tribus visam maternaque salutifer
 
 Recentes ab gradus o pollice misit mox actis agrisque memorabile donec et posses
-*pavor* feto. Danda et hunc pronus sine *est* tenuisse conscendit nomina ultimus
+_pavor_ feto. Danda et hunc pronus sine _est_ tenuisse conscendit nomina ultimus
 terrore ferre se amens percussa quem. Mihi armo vocem color; sponte haerentem
-cremet ubi Colchis; animal veneni; fores munus rogaberis *vivere*. Frondibus
+cremet ubi Colchis; animal veneni; fores munus rogaberis _vivere_. Frondibus
 receptae, relatis [matrem dona](http://inpune-vicinia.net/si-sequitur.html),
 aures quoslibet errorem!

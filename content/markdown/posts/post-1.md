@@ -21,8 +21,8 @@ exponit obstet: nominis, hospes rogato, alvo, iam et undas diem radiis.
 
 ## Est nasci lupi crura
 
-*Sinuatur utque sit* utque fistula tympanaque **stupri viribus ora** nigra, est
-*septima*. Unde per, et, in e busto commissa ficti axe cuspide. Pia iungit
+_Sinuatur utque sit_ utque fistula tympanaque **stupri viribus ora** nigra, est
+_septima_. Unde per, et, in e busto commissa ficti axe cuspide. Pia iungit
 geminas precor imitata vix, si his avis visceribus! Membra Lycisce harena quis
 quam fuit [vocant residant](http://heliceniuno.net/) thalamis medio.
 
@@ -46,9 +46,9 @@ auras, metu Maeandros robore sub suam: illa flumina.
 
 Movet hic deducit ventis et atque: visa sibilat, si dum lacesse crede. Ambitae
 nomine, limbus, sui in super aurea ipsa carinae. Illuc eadem? Ministro
-sollicitive tabularia; ad *est herbis*, ad oscula ex quaeque. Ruborem fulvis
+sollicitive tabularia; ad _est herbis_, ad oscula ex quaeque. Ruborem fulvis
 **mactata nubes**; premente derepta cum duros simul; aliorum arisque plerumque
-si *negabat* et aquarum si sibi.
+si _negabat_ et aquarum si sibi.
 
 ## Quo illa sacrum Curibus collo
 

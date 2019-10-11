@@ -2,7 +2,7 @@ const path = require(`path`)
 
 const author = {
   firstname: "Pierre-Alexis",
-  lastname: "Blond"
+  lastname: "Blond",
 }
 
 module.exports = {
