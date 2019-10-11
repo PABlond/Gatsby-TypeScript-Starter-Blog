@@ -1,5 +1,6 @@
 import React from "react"
 import { graphql } from "gatsby"
+import "./../../assets/styles/style.scss"
 import { IPostRequest } from "./../../interfaces/requests.interface"
 import { GatsbyImageProps } from "gatsby-image/index"
 
