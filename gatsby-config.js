@@ -16,7 +16,7 @@ module.exports = {
       twitter: "https://twitter.com/_pablond",
       github: "https://github.com/PABlond",
     },
-    themeColor: "#5c821a",
+    themeColor: "#542C85",
     siteUrl: "https://friendly-cray-96d631.netlify.com/",
   },
   plugins: [
@@ -56,7 +56,7 @@ module.exports = {
         short_name: `starter`,
         start_url: `/`,
         background_color: `#fff`,
-        theme_color: `#5c821a`,
+        theme_color: `#542C85`,
         display: `minimal-ui`,
         icon: `src/assets/images/gatsby-icon.png`,
       },
