@@ -3,6 +3,7 @@ import "bootstrap/dist/css/bootstrap.min.css"
 import "./../assets/styles/style.scss"
 import { graphql } from "gatsby"
 import { Container, Row } from "react-bootstrap"
+import Head from './../components/Head'
 import Header from "./../components/Header"
 import About from "./../components/About"
 import Footer from "./../components/Footer"
@@ -26,12 +27,13 @@ const IndexPage = ({ data }) => {
 
   console.log(data)
   return (
-    <Container fluid className="mt-1">
+    <>
+      <Head siteMetadata={siteMetadata} pageName={"Homepage"} />
       <Header siteMetadata={siteMetadata} />
       <About authorPicture={authorPicture} siteMetadata={siteMetadata} />
       <Posts content={content} />
       <Footer siteMetadata={siteMetadata} />
-    </Container>
+    </>
   )
 }
 
@@ -69,6 +71,8 @@ export const pageQuery = graphql`
           twitter
           github
         }
+        themeColor
+        siteUrl
       }
     }
     authorPicture: file(relativePath: { eq: "author.jpg" }) {
