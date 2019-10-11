@@ -2,7 +2,7 @@ const path = require(`path`)
 
 module.exports = {
   siteMetadata: {
-    title: `Not everyone can be Gandhi`,
+    title: `Pierre-Alexis's Blog`,
     description: `Not everyone can be Gandhi, but each of us has the power to make sure our own lives count – and it’s those millions of lives that will ultimately build a better world. – Jeffrey Skoll`,
     author: `Pierre-Alexis Blond`,
     authorDescription: "tries to make the world better",
@@ -11,8 +11,18 @@ module.exports = {
       twitter: "https://twitter.com/_pablond",
       github: "https://github.com/PABlond",
     },
+    themeColor: "#fff",
+    siteUrl: "https://friendly-cray-96d631.netlify.com/"
   },
   plugins: [
+    {
+      resolve: 'gatsby-plugin-web-font-loader',
+      options: {
+        google: {
+          families: ['Mansalva', 'Playfair Display', 'Source Sans Pro']
+        }
+      }
+    },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -49,8 +59,6 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-
-        excerpt_separator: `<!-- cover -->`,
         plugins: [
           {
             resolve: `gatsby-remark-images`,
