@@ -1,11 +1,12 @@
-import React, { useState, useEffect } from "react"
+import React, { useState } from "react"
+import { IPostsContent } from "./../../interfaces/data.interface"
+
 import { FaList, FaGripVertical } from "react-icons/fa"
 import LastContent from "./LastContent"
-import OldContent from './OldContent'
+import OldContent from "./OldContent"
 
-export default ({ content }) => {
-  console.log(content)
-  const [isUICol, setIsUICol] = useState<boolean>(true)
+export default ({ content }: { content: IPostsContent[] }) => {
+  const [isUICol, setIsUICol] = useState<Boolean>(true)
   return (
     <>
       <div id="ui-posts-selector">

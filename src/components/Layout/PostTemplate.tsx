@@ -1,18 +1,18 @@
-import "bootstrap/dist/css/bootstrap.min.css"
 import React from "react"
-import { graphql, navigate } from "gatsby"
+import { graphql } from "gatsby"
+import { IPostRequest } from "./../../interfaces/requests.interface"
+
 import Img from "gatsby-image"
 import Head from "./../Head"
 import Header from "./../Header"
 import Footer from "./../Footer"
 
-export default ({ data }) => {
-  console.log(data)
+export default ({ data }: { data: IPostRequest }) => {
   const {
     site: { siteMetadata },
     markdownRemark: {
       frontmatter: { featuredImage, title },
-      html
+      html,
     },
   } = data
   const imgProps = featuredImage.childImageSharp
@@ -26,10 +26,7 @@ export default ({ data }) => {
         <div id="cover-image">
           <Img {...imgProps} />
         </div>
-        <div
-          id="post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div id="post-content" dangerouslySetInnerHTML={{ __html: html }} />
       </section>
       <Footer siteMetadata={siteMetadata} />
     </>

@@ -1,16 +1,16 @@
 import React from "react"
-import "bootstrap/dist/css/bootstrap.min.css"
 import "./../assets/styles/style.scss"
 import { graphql } from "gatsby"
-import { Container, Row } from "react-bootstrap"
-import Head from './../components/Head'
+import { IHomeRequest } from "./../interfaces/requests.interface"
+
+import Head from "./../components/Head"
 import Header from "./../components/Header"
 import About from "./../components/About"
 import Footer from "./../components/Footer"
 import Posts from "./../components/Posts"
 
-const IndexPage = ({ data }) => {
-  const { siteMetadata } = data.site
+const IndexPage = ({ data }: { data: IHomeRequest }) => {
+  // Helper to organize useful data in request
   const content = data.allMarkdownRemark.edges.map(mod => {
     const {
       frontmatter: {
@@ -23,9 +23,9 @@ const IndexPage = ({ data }) => {
     } = mod.node
     return { title, date, excerpt, slug, childImageSharp }
   })
+  const { siteMetadata } = data.site
   const authorPicture = data.authorPicture.childImageSharp
 
-  console.log(data)
   return (
     <>
       <Head siteMetadata={siteMetadata} pageName={"Homepage"} />
