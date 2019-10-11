@@ -10,13 +10,13 @@ export default ({ siteMetadata }) => {
         &copy; {new Date().getFullYear()} {siteMetadata.author}
       </p>
       <span id="footer-socials">
-        <a target="_blank" href={siteMetadata.socials.linkedin} aria-label="Linkedin">
+        <a target="_blank" href={siteMetadata.socials.linkedin} aria-label="Linkedin" rel="noreferrer">
           <FaLinkedin />
         </a>
-        <a target="_blank" href={siteMetadata.socials.twitter} aria-label="Twitter">
+        <a target="_blank" href={siteMetadata.socials.twitter} aria-label="Twitter" rel="noreferrer">
           <FaTwitterSquare />
         </a>
-        <a target="_blank" href={siteMetadata.socials.github} aria-label="Github">
+        <a target="_blank" href={siteMetadata.socials.github} aria-label="Github" rel="noreferrer">
           <FaGithub />
         </a>
       </span>
