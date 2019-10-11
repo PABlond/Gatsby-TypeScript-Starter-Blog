@@ -3,12 +3,12 @@ const path = require("path")
 
 const replacePath = path => (path === `/` ? path : path.replace(/\/$/, ``))
 
-exports.createPages = ({ actions, graphql }) => {
+exports.createPages = async ({ actions, graphql }) => {
   const { createPage } = actions
 
-  const postTemplate = path.resolve(`src/components/Layout/PostTemplate.tsx`)
+  const postTemplate = path.resolve(`src/components/Post/index.tsx`)
 
-  return graphql(`
+  const result = await graphql(`
     {
       allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
@@ -26,33 +26,25 @@ exports.createPages = ({ actions, graphql }) => {
         }
       }
     }
-  `).then(result => {
-    if (result.errors) {
-      return Promise.reject(result.errors)
-    }
-    result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-      createPage({
-        path: replacePath(node.fields.slug),
-        component: postTemplate,
-        context: { cover: node.frontmatter.cover },
-      })
+  `)
+
+  if (result.errors) {
+    return Promise.reject(result.errors)
+  }
+
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: replacePath(node.fields.slug),
+      component: postTemplate,
     })
   })
 }
 
 exports.onCreateNode = ({ node, getNode, actions }) => {
-  const { createNodeField, createPage } = actions
-  if (node.internal.type === `MarkdownRemark`) {
-    const slug = createFilePath({ node, getNode, basePath: `pages` })
-    createNodeField({
+  if (node.internal.type === `MarkdownRemark`)
+    actions.createNodeField({
       node,
       name: `slug`,
-      value: replacePath(slug),
+      value: replacePath(createFilePath({ node, getNode, basePath: `pages` })),
     })
-    createNodeField({
-      node,
-      name: `cover`,
-      value: replacePath(slug),
-    })
-  }
 }
